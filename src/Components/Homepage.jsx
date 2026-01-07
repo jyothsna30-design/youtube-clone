@@ -1,4 +1,4 @@
-
+import {Link } from "react-router-dom";
 
 function Homepage({sidebar}){
     const options = ["All ","News","Music","Live","Gaming","T2 cricket","movies","Astrology","comedy","coke studio","kids shows","cartoons","old movies"];
@@ -18,6 +18,7 @@ function Homepage({sidebar}){
           
         </div></div>
        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 p-6 ml-60 mt-5">
+         <Link to='/watch/ggfhii'>
           <div className="cursor-pointer">
              <img src="https://cdnblog.picsart.com/2022/05/blog_types-of-videos_video-7_1200x800-780x520.png" alt="video"  className="w-80 h-60 rounded-lg" />
              <div className="flex">
@@ -26,7 +27,7 @@ function Homepage({sidebar}){
              <div>5 likes</div></div>
           </div>
           </div>
-
+           </Link>
            <div className="cursor-pointer">
              <img src="https://cdnblog.picsart.com/2022/05/blog_types-of-videos_video-7_1200x800-780x520.png" alt="video"  className="w-80 h-60 rounded-lg" />
              <div className="flex">
