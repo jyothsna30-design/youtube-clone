@@ -12,7 +12,21 @@ import { useNavigate } from 'react-router-dom';
 function Navbar({setSidebarFun,sidebar}){
   const [userpic,setUserpic] = useState("https://t3.ftcdn.net/jpg/11/61/33/40/360_F_1161334053_YhWMr4wDxYZlPMSsdTau11bLUM1fpbYF.jpg");
   const [navbarmodal,setnavbarmodal] = useState(false);
+  const [isLoggedIn,setIsLoggedIn]= useState(false);
   const navigate = useNavigate();
+  function onClickoflogin(value){
+     setnavbarmodal(false);
+    if(value==="login"){
+      setIsLoggedIn(true);
+      navigate('/login');
+     
+    }
+    else{
+      setIsLoggedIn(false);
+      navigate('/');
+      
+    }
+  }
   function handleClick(){
     setnavbarmodal(prev=>!prev);
   }
@@ -39,8 +53,8 @@ function Navbar({setSidebarFun,sidebar}){
       <div className='flex flex-col absolute top-10'>
         
         <div className="bg-gray-800 cursor-pointer p-5 w-30 h-15 hover:bg-black text-white" onClick={handleprofile}>Profile</div>
-        <div className="bg-gray-800 cursor-pointer p-5 h-15 hover:bg-black text-white">Login</div>
-        <div className="bg-gray-800 cursor-pointer p-5 h-15 hover:bg-black text-white">Logout</div>
+        <div className="bg-gray-800 cursor-pointer p-5 h-15 hover:bg-black text-white" onClick={()=> onClickoflogin("login")}>Login</div>
+        <div className="bg-gray-800 cursor-pointer p-5 h-15 hover:bg-black text-white" onClick={()=> onClickoflogin("logout")}>Logout</div>
       </div>}
    </div>
   </div>)
