@@ -1,8 +1,10 @@
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ThumbDownOffAltIcon from '@mui/icons-material/ThumbDownOffAlt';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
 
 function Video(){
+    const [comments,setComments]=useState("");
     return(<>
     <div className="mt-1 flex p-25 justify-center">
         <div className="w-full max-w-875 flex flex-col">
@@ -50,7 +52,7 @@ function Video(){
                             <div className='flex mt-3'>
                                 <img src={"https://img.freepik.com/free-vector/media-content-management-vlogging-activities-product-videos-sharing-online-marketing-advertising-tool-female-vlogger-streaming-live_335657-864.jpg?semt=ais_hybrid&w=740&q=80"} className="w-7 h-8 mt-2 border-0 rounded-full"/>
                                 <div className='w-100%'>
-                                    <input type="text" placeholder='Add a comment' className='border-b border-gray-500 ml-2 mt-2 w-150'></input>
+                                    <input type="text" value={comments} placeholder='Add a comment' onChange={(e)=>{setComments(e.target.value)}} className='border-b border-gray-500 ml-2 mt-2 w-150'></input>
                                  <div className='flex mt-2 ml-120'>
                                     <div className='mr-2 border rounded-2xl p-1'>Cancel</div>
                                     <div className='border rounded-2xl p-1'>Comment</div>
