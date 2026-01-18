@@ -14,6 +14,7 @@ function Navbar({setSidebarFun,sidebar}){
   const [navbarmodal,setnavbarmodal] = useState(false);
   const [isLoggedIn,setIsLoggedIn]= useState(false);
   const navigate = useNavigate();
+  //function for login and logout
   function onClickoflogin(value){
      setnavbarmodal(false);
     if(value==="login"){
@@ -27,6 +28,7 @@ function Navbar({setSidebarFun,sidebar}){
       
     }
   }
+  
   function handleClick(){
     setnavbarmodal(prev=>!prev);
   }
@@ -34,9 +36,11 @@ function Navbar({setSidebarFun,sidebar}){
     navigate('/user/1');
     setnavbarmodal(false);
   }
+  //function to toggle sidebar
   const toggleBar = ()=>{
     setSidebarFun(!sidebar);
   }
+  //navbar component
   return (
   <div className='fixed top-0 w-full h-14 bg-black flex z-50'>
    <div className='m-3 cursor-pointer' onClick={toggleBar}><MenuIcon sx={{color:"white"}} /></div>
