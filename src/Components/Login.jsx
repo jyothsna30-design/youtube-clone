@@ -3,6 +3,7 @@ import YouTubeIcon from '@mui/icons-material/YouTube';
 import {useState} from 'react'
 import { Link } from 'react-router-dom';
 function Login() {
+  //state for login fields
     const [loginField,setloginField] = useState({
         username:"",
         password:""
@@ -13,6 +14,7 @@ function Login() {
         [field]:e.target.value
     })
     }
+    //login form 
   return (
     <div className="login">
         <div className="login_card">
