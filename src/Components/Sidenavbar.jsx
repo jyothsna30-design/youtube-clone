@@ -8,7 +8,7 @@ import PlaylistPlayIcon from '@mui/icons-material/PlaylistPlay';
 import SlideshowIcon from '@mui/icons-material/Slideshow';
 import ThumbUpOffAltIcon from '@mui/icons-material/ThumbUpOffAlt';
 import ContentCutIcon from '@mui/icons-material/ContentCut';
-function Sidenavbar({sidebar}){
+function Sidenavbar({sidebar}){  //sidenavbar(hamburger)
     return(<>
     {sidebar &&
     <div className='bg-black fixed top-12 w-60 h-100% overflow-y-scroll no-scrollbar'>
